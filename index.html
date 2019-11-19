@@ -1,37 +1,23 @@
+<select size="3">
+   <option selected="">
+  </select>
+   <style>
+    .container{background-size:50; float:right; }
+    #canvas-image,#canvas-padding{display: table-cell};
+   </style>
+   </p>
+  <div class="container">
+   <canvas id="canvas-padding">
+  </div>
+  <pre id="layer-tree">
 <script>
-function start() {
-        o31=window.getSelection();
-        o53=document.createRange();
-        o59=(new DOMParser()).parseFromString(unescape(''),'text/html');
-        o60=o59.all[0];
-        o61=o59.all[1];
-        o65=document.createElement('form');
-        o59.documentElement.appendChild(o65);
-        o68=document.createElement('table');
-        o60.appendChild(o68);
-        o86=document.createElement('style');
-        o87=document.createTextNode("@import url(}");
-        o86.appendChild(o87);
-        o31.addRange(o53);
-        o130=document.createElement('keygen');
-        o65.appendChild(o130);
-        o167=document.createElement('style');
-        o200=document.createElement('style');
-        o201=document.createTextNode(" key1{");
-        o200.appendChild(o201);
-        o65.appendChild(o200);
-        o61.appendChild(o167);
-        document.replaceChild(o59.documentElement,document.documentElement);
-        o324=document.createElement('style');
-        o167.appendChild(o324);
-        o31.modify('extend', 'right','line');
-        o31.modify('move', 'forward','lineboundary');
-        o398=document.createElement('link');
-        o398.setAttributeNS('','rel','import');
-        o31.modify('move', 'forward','character');
-        o200.appendChild(o86);
-        o324.appendChild(o398);
-        o31.modify('move', 'left','line');
-}
+    var test0=document.getElementById("canvas-padding")
+    var test2=document.getElementById("layer-tree")
+    document.execCommand("usecss")
+    test2.appendChild(test0.cloneNode());
+    test2.style['position']='absolute';
+    var styleSheet0 = document.styleSheets[0];
+    styleSheet0.insertRule('.container{display: table;}');
+    document.execCommand( false)
+    document.body.style.zoom=0.50
 </script>
-<body onload="start()"></body>
