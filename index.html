@@ -1,36 +1,25 @@
-<script>
-function start() {
-	o172=document.createElement('a');
-	o390=document.createElement('u');
-	try{o172.insertAdjacentHTML('beforebegin','')}catch(e){}
-	o461=document.importNode(o172,true);
-	o390.appendChild(o461);
-	o390=null;
-	o893=o461.parentElement;
-	document.documentElement.appendChild(o893);
-	o910=document.createElement('input');
-	o461.appendChild(o910);
-	o910.type='image';
-	document.execCommand('inserthtml',false,'');
-	o1050=document.createElement('meta');
-	document.documentElement.innerHTML='';
-	o1104=document.createElement('table');
-	document.body.appendChild(o1104);
-	o1050.contentEditable=false;
-	o1189=document.createElement('input');
-	o1104.appendChild(o1189);
-	o1050.setAttribute('dir','rtl');
-	o1291=o1189.createShadowRoot();
-	o1291.appendChild(o1050);
-	o1416=o1050.attributes[1];
-	o1050.removeAttribute(o1416.name);
-	document.createNodeIterator(o1416, 487380955);
-	o1559=document.createElement('s');
-	o1716=document.implementation.createDocument('', '', null).implementation.createDocument('', '', null);
-	o1724=document.createElement('t');
-	o1716.appendChild(o1724);
-	o1716.appendChild(document.replaceChild(o1716.documentElement,document.documentElement));
-	gc();
-}
-start();
-</script>
+<body>
+	<script type="foo">
+		s.appendChild(p)
+	</script>
+	<b>
+		<p>
+			<script>
+			 p = document.querySelector("p");
+			 s = document.querySelector("script");
+			 s.appendChild(p);
+			 s.type = "";
+			 </script>
+		</b>
+	</p>
+	<script>
+		p.parentNode.innerHTML = "";
+		p = null;
+		(gc = function() {
+			for (var i = 0; i < 30000; ++i)
+				var s = new String("AAAA" + Math.random());
+		})();
+		console.log(s.lastChild);
+		location.reload();
+	</script>
+</body>
