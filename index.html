@@ -1,3 +1,29 @@
-<body>
-    <p>Hello World!</p>
-</body>
+<script>
+function start() {
+        o0=window.document;
+        o3=o0.implementation.createDocument('http://www.w3.org/1999/xlink','overlay',undefined);
+        o5=o3.querySelector('*:not([id])');
+        o9=o0.createElementNS('http://www.w3.org/1999/xhtml','form');
+        o9.id='id2';
+        o0.documentElement.appendChild(o9);
+        o11=document.createElementNS('http://www.w3.org/1999/xhtml','form');
+        o3.documentElement.appendChild(o11);
+        document.documentElement.appendChild(o5);
+        o11.innerHTML=unescape('<style>');
+        delete o9;
+        o36=o0.createElement('menu');
+        o47=document.createElementNS('http://www.w3.org/1999/xhtml','input');
+        document.documentElement.appendChild(o36);
+        o54=o36['createShadowRoot'](undefined,undefined,'',undefined,-1);
+        o63=o0.getElementById('id2');
+        o54.appendChild(o63);
+        window.top.setTimeout(timeout_23);
+}
+function timeout_23() {
+        o47.innerHTML=unescape('<style>');
+        o72=o0.createElement('figure');
+        o63.appendChild(o47);
+        o72.appendChild(o47);
+}
+start();
+</script>
