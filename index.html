@@ -1,14 +1,3 @@
-<style></style>
-<div id="div"></div>
 <script>
-    var div = document.getElementById("div");
-    var shadowRoot = div.createShadowRoot();
-    shadowRoot.innerHTML = "<form><input></form>";
-
-    // Force a style recalc.
-    getComputedStyle(document.body).color;
-
-    var input = shadowRoot.querySelector("input");
-    input.appendChild(document.createElement("style"));
-    input.remove();
+  alert('hello world');
 </script>
