@@ -1,0 +1,80 @@
+<html>
+<head>
+
+<style>
+
+body {  
+  margin: 0;
+  overflow-y: scroll;      
+}
+
+@-webkit-keyframes a{100%{-webkit-transform: translateX(0)}} /* any webkit transformation will do */
+
+.d{
+  position:absolute;
+  -webkit-animation:a 4s;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- This DIV is above the next DIV on the Z-axis -->
+<div style="position: relative;z-index: 90;"></div>
+
+
+
+    
+		<div style="width:0px;margin: 0 auto;position: relative;z-index: 0">
+	
+		
+			<div style="position: absolute; overflow-x: scroll; ">
+			
+			
+			
+			  <div style="position: absolute;width:100%;height:100%;">
+			    <div style="position:relative;z-index:0;">
+			
+			                   <div class="d">
+			                 
+			                   </div>
+				</div>
+			  </div>
+			  
+			  
+			  
+			  
+			  <iframe  src="iframe.html"></iframe>
+			</div>
+			             
+		
+		</div>
+	
+
+
+<script>
+
+window.onload=function(){ 
+
+document.getElementsByTagName('div')[3].style.zIndex=0;
+
+//removing the parent of the animated DIV before the end of the animation
+setTimeout(function(){
+document.getElementsByTagName('div')[4].parentNode.removeChild(document.getElementsByTagName('div')[4]);
+},1);
+
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
