@@ -3,18 +3,21 @@
 
 <script>
 function onStart() {
-    var div = document.getElementById("div");
-    var shadowRoot = div.createShadowRoot();
-    shadowRoot.innerHTML = "<form><input></form>";
+    // var div = document.getElementById("div");
+    // var shadowRoot = div.createShadowRoot();
+    // shadowRoot.innerHTML = "<form><input></form>";
 
     // Force a style recalc.
     getComputedStyle(document.body).color;
 
     var input = shadowRoot.querySelector("input");
     input.appendChild(document.createElement("style"));
+    input.remove();
 }
 
 function onStop() {
+    // Force a style recalc.
+    getComputedStyle(document.body).color;
     var input = shadowRoot.querySelector("input");
     input.remove();
 }
@@ -22,3 +25,9 @@ function onStop() {
 
 <button type="button" onclick="onStart()">Start</button>
 <button type="button" onclick="onStop()">Stop</button>
+
+<script>
+var div = document.getElementById("div");
+var shadowRoot = div.createShadowRoot();
+shadowRoot.innerHTML = "<form><input></form>";
+</script>
